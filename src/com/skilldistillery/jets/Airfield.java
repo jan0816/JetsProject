@@ -126,12 +126,11 @@ public class Airfield {
 		} else if (type == 2) {
 			addedJet = new CargoPlane(modelName, newSpeed, newRange, newPrice);
 			jets.add(addedJet);
-			System.out.println("Added a cargo plane " + addedJet.toString());	
-		} else if (type == 3 ) {
+			System.out.println("Added a cargo plane " + addedJet.toString());
+		} else if (type == 3) {
 			addedJet = new JetImpl(modelName, newSpeed, newRange, newPrice);
 			jets.add(addedJet);
-		}
-		else {
+		} else {
 			System.out.println("I'm sorry, your plane has not been added yet due to an error.");
 		}
 
@@ -140,8 +139,8 @@ public class Airfield {
 	public void removeJet(Scanner kb2) {
 		System.out.println("I see you would like to REMOVE a jet..." + "\n Which one? Put the number in.");
 		int count = 1;
-		for (Jets jets2 : jets) {
-			System.out.println(count + " " + jets.toString());
+		for (Jets jetsInd : jets) {
+			System.out.println(count + " " + jetsInd.toString());
 			count++;
 		}
 		int input = kb.nextInt();
